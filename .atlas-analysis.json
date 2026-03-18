@@ -1,0 +1,129 @@
+{
+  "projectType": "saas",
+  "projectName": "RideShare Live",
+  "projectDescription": "A full-stack ride-sharing platform with real-time location tracking, JWT authentication, Stripe payments, and WebSocket-based live driver updates built on Spring Boot and React.",
+  "theme": "almond",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "prerequisites"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/environment-variables",
+              "configuration/database",
+              "configuration/email-sms",
+              "configuration/payments"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/authentication",
+              "features/ride-booking",
+              "features/real-time-tracking",
+              "features/payments",
+              "features/notifications"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/cloud"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/signup-otp",
+              "api/auth/signup",
+              "api/auth/login",
+              "api/auth/refresh",
+              "api/auth/logout"
+            ]
+          },
+          {
+            "group": "Rides",
+            "pages": [
+              "api/rides/book",
+              "api/rides/estimate",
+              "api/rides/status",
+              "api/rides/history",
+              "api/rides/cancel",
+              "api/rides/feedback",
+              "api/rides/nearby-drivers"
+            ]
+          },
+          {
+            "group": "Payments",
+            "pages": [
+              "api/payments/checkout"
+            ]
+          },
+          {
+            "group": "Notifications",
+            "pages": [
+              "api/notifications/overview"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "JWT-based authentication with OTP email verification",
+    "Real-time driver location tracking via WebSocket/STOMP",
+    "Stripe payment integration with checkout sessions",
+    "Role-based access control (RIDER / DRIVER)",
+    "Ride lifecycle management: booking, accepting, completing, cancellation",
+    "Driver location caching with geospatial nearby-driver search",
+    "In-app notification center",
+    "Rider and driver dashboards with live map panel",
+    "Ride feedback and rating system",
+    "Docker Compose deployment with PostgreSQL and Redis"
+  ],
+  "publicApiSurface": [
+    "POST /auth/signup/request-otp",
+    "POST /auth/signup",
+    "POST /auth/login",
+    "POST /auth/refresh",
+    "POST /auth/logout",
+    "POST /rides/book",
+    "GET /rides/estimate",
+    "POST /rides/status/{rideId}",
+    "GET /rides/history",
+    "GET /rides/requested",
+    "GET /rides/status/{rideId}",
+    "GET /rides/drivers/nearby",
+    "POST /rides/feedback/{rideId}",
+    "POST /rides/location/{rideId}",
+    "POST /rides/cancel/{rideId}",
+    "POST /payments/checkout-session",
+    "GET /notifications",
+    "GET /public/health"
+  ]
+}
